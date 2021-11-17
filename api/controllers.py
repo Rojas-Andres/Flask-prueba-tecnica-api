@@ -4,9 +4,7 @@ from api.functions import *
 bp_api = Blueprint('Api',__name__,url_prefix="/Api")
 
 api = Api(bp_api,version="1.0",title="Api",description="End Points")
-ns_model = api.namespace('Methods', description='Metodos')
-ns_model_venta = api.namespace('ApiVentas', description='Ventas')
-ns_model_usuario = api.namespace('Usuario', description='Usuario')
+ns_model = api.namespace('ApiMascotas', description='MascotasApi')
 
 @ns_model.route('/mascotas/')
 @api.doc(description="Listar todas las mascotas")
